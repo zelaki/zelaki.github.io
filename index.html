@@ -191,7 +191,7 @@
                   </td>
                   <td align=center width=120px>
                      <center>
-                        <span style="font-size:22px">Yannis Panagakis<sup>1</sup></span>
+                        <span style="font-size:22px">Yannis Panagakis<sup>1,3</sup></span>
                      </center>
                   </td>
                   
@@ -204,17 +204,44 @@
          <tr>
             <td align=center width=120px>
                <center>
-                  <sup>1</sup><i>Athena Research Center, GR</i>
+                  <sup>1</sup><i>Institute of Speech and Language Processing, Athena Research Center, GR</i>
                </center>
             </td>
             <td align=center width=220px>
                </center>
-               <sup>2</sup><i>University of Athens, GR</i>
+               <sup>2</sup><i>Department of Informatics and Telecommunications, University of Athens, GR</i>
                </center>
             </td>
+            <td align=center width=220px>
+               </center>
+               <sup>3</sup><i>Archimedes Unit, Athena Reseach Center, GR</i>
+            </center>
+         </td>
          </tr>
       </table>
       <br>
+      <table align=center width=500px>
+         <tr>
+            <td align=center width=120px>
+               <center>
+                  <a href="https://arxiv.org/abs/2203.1wrwe5147">[ArXiv]</a>
+               </center>
+            </td>
+            <td align=center width=120px>
+               </center>
+               <a href="https://github.com/zelaki/DreamStudio">[Code]</a>
+               </center>
+            </td>
+            <td align=center width=120px>
+            </center>
+            <a href="https://zenodo.com/Dataset">[Dataset]</a>
+            </center>
+         </td>
+            
+         </tr>
+      </table>
+      
+      
       <hr>
       <table align=center width=1000px>
          <center>
@@ -223,9 +250,22 @@
          <tr>
             <td>
                <p>
-                  Recently, text-to-audio generation models have achieved unprecedented results in synthesizing high-quality and diverse general audio and music from a given text prompt. Despite the variety of possible sounds that one can create, it is unclear how to generate specific audio concepts or manipulate them and combine them with existing ones. For example, can one generate a song using their personal guitar playing style, or a specific ethnic instrument? In text-to-image diffusion models, this is known as \textit{personalization}. In this work, we investigate text-to-audio personalization by adopting two established methods from the image domain, namely Textual Inversion and Dreambooth. We evaluate both methods on their ability to learn and modify new audio concepts, using quantitative metrics and a user study. 
+                  In this work, we investigate the personalization of text-to-music diffusion models in a few-shot setting. Motivated by 
+                  recent advances in the computer vision domain, we are the first
+                  to explore the combination of pre-trained text-to-audio diffusers with two established personalization methods. 
+                  We experiment with the effect of audio-specific data augmentation
+                  on the overall system performance and assess different training strategies. For evaluation, we construct a novel dataset
+                  with prompts and music clips. We consider both embedding-based and music-specific metrics for quantitative evaluation,
+                  as well as a user study for qualitative evaluation. Our analysis shows that similarity metrics are in accordance with user
+                  preferences and that current personalization approaches tend
+                  to learn rhythmic music constructs more easily than melody.
+                  The code, dataset, and example material of this study are open
+                  to the research community. 
                </p>
             </td>
+            <tr>
+            <td align=center><img  style="width:600px" src="img/intro_smaller.png"/></td>
+         </tr>
          </tr>
       </table>
       <!-- <br>
@@ -253,19 +293,19 @@
          </center>
          <tr>
             <td>
-               <p>In this work, we start from a pre-trained text-to-audio diffusion model, i.e.  AudioLDM \cite{liu2023audioldm}, and to the best of our knowledge are the first to investigate the ability to personalize its outputs for newly learned musical concepts in a few-shot manner.
-                  Motivated by the computer vision literature, we explore the application of two established methods, i.e. Textual Inversion \cite{gal2023an} and Dreambooth \cite{ruiz2023dreambooth}.
+               <p>In this work, we start from a pre-trained text-to-audio diffusion model, i.e.  AudioLDM, and to the best of our knowledge are the first to investigate the ability to personalize its outputs for newly learned musical concepts in a few-shot manner.
+                  Motivated by the computer vision literature, we explore the application of two established methods, i.e. Textual Inversion and Dreambooth.
                   We adapt these methods for music personalization by employing a set of audio-specific data augmentation methods. 
-                  We evaluate the capacity of the model to learn new concepts, along two dimensions, \emph{reconstruction}, i.e. the ability to faithfully reconstruct input examples, and \emph{editability}, i.e. the ability to manipulate the generation through textual prompts. 
+                  We evaluate the capacity of the model to learn new concepts, along two dimensions, reconstruction, i.e. the ability to faithfully reconstruct input examples, and editability, i.e. the ability to manipulate the generation through textual prompts. 
                   To this end, we construct a new dataset of various instruments and playing styles. Our evaluation protocol consists of a) embedding distance-based metrics, b) music-specific metrics, and c) an A/B testing user study comparing the two adaptation approaches.
                   Finally, we adapt AudioLDM to perform text-guided style transfer for newly learned concepts. 
                   
-                  Our key contributions are a) the personalization of AudioLDM's generation and style-transfer abilities for new concepts, b) the exploration of audio-specific augmentations and evaluation metrics, and c) the construction of a new dataset for text-to-music personalization methods. Our code and data, as well as generated music samples, are publicly available \footnote{$INSERT_LINK$}.
+                  Our key contributions are a) the personalization of AudioLDM's generation and style-transfer abilities for new concepts, b) the exploration of audio-specific augmentations and evaluation metrics, and c) the construction of a new dataset for text-to-music personalization methods. 
                </p>
             </td>
          </tr>
          <tr>
-            <td><img style="width:1000px" src="img/method_new.png"/></td>
+            <td align=center><img style="width:600" src="img/method_new.png"/></td>
          </tr>
       </table>
       <br>
@@ -276,9 +316,14 @@
 
 
       <center>
-         <h1>Concept Reconstruction Examples</h1>
+         <h1>Main Results</h1>
       </center>
       <table align=center width=1200px>
+         <center>
+            <h2>
+            Concept Reconstruction Examples
+            </h2>
+         </center>
          <tr>
             <td align=left width=1200px>
                <!-- We demonstrate the audio samples separated by our proposed LASS-Net. There are four audio clips for each example:<br><br>
@@ -623,7 +668,7 @@
 
       <table align=center width=1200px>
          <center>
-            <h1>Editability Examples</h1>
+            <h2>Editability Examples</h2>
          </center>
          <tr>
             <td align=left width=1200px>
@@ -636,22 +681,22 @@
                <tr>
                   <td>
                      <center>
-                        (a) audio mixture
+                        (a) Reference Audio
                      </center>
                   </td>
                   <td>
                      <center>
-                        (b) LASS (AudioCaps)
+                        (b) Dreambooth
                      </center>
                   </td>
                   <td>
                      <center>
-                        (c) LASS (human)
+                        (c) Textual Inversion
                      </center>
                   </td>
                   <td>
                      <center>
-                        (d) target source
+                        (d) AudioLDM
                      </center>
                   </td>
                </tr>
@@ -686,35 +731,377 @@
                      </center>
                   </td>
                </tr>
-               
-               
+               <tr>
+                  <td>
+                     <center>
+                        
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a S*"
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a S*"
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a traditional turkish oud string instrument"
+                     </center>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/mix.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/lass.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/human.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/tgt.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a S*"
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a S*"
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a traditional turkish oud string instrument"
+                     </center>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/mix.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/lass.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/human.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/tgt.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a S*"
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a S*"
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a traditional turkish oud string instrument"
+                     </center>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/mix.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/lass.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/human.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/tgt.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a S*"
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a S*"
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a traditional turkish oud string instrument"
+                     </center>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/mix.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/lass.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/human.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/tgt.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a S*"
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a S*"
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a traditional turkish oud string instrument"
+                     </center>
+                  </td>
+               </tr>
                </tr>
             </table>
          </tr>
       </table>
       <br>
-<!-- 
+
       <table align=center width=1200px>
          <center>
-            <h1>Long Generation</h1>
+            <h2>Personalized Style Transfer</h2>
          </center>
          <tr>
             <td align=left width=1200px>
-               As the model can generate arbitrarily long audio, it is possible to create long music recordings using only some small examples of what one wants to recreate.
+               Some examples of personalized style transfer. By denoising a shallow reverse process and conditioning on a learned concept via the textual prompt S*, 
+               we can transfer the learned concept's style to the input source.<br><br>
+
             </td>
          </tr>
-         <tr>
+        
             <table align=center width=1200px>
                <tr>
-                  <center>
-                     Reference Audio
-                  </center>
+                  <td>
+                     <center>
+                        (a) Reference Audio
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        (b) Dreambooth
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        (c) Textual Inversion
+                     </center>
+                  </td>
+                  
+               </tr>
+               <tr>
+               <tr>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/mix.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/lass.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/human.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a S*"
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a S*"
+                     </center>
+                  </td>
+                  
                </tr>
                <tr>
                   <td>
                      <center>
                         <audio controls="">
-                           <source src="./demo/exp3/mix.wav" type="audio/wav"/>
+                           <source src="./demo/exp2/mix.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/lass.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/human.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a S*"
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a S*"
+                     </center>
+                  </td>
+                  
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/mix.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/lass.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/human.wav" type="audio/wav"/>
                         </audio>
                      </center>
                   </td>
@@ -722,740 +1109,438 @@
                <tr>
                   <td>
                      <center>
-                        <audio controls="">
-                           <source src="./demo/exp3/lass.wav" type="audio/wav"/>
-                        </audio>
+                        
                      </center>
                   </td>
                   <td>
                      <center>
-                        <audio controls="">
-                           <source src="./demo/exp3/human.wav" type="audio/wav"/>
-                        </audio>
+                        "A recording of a S*"
                      </center>
                   </td>
                   <td>
                      <center>
-                        <audio controls="">
-                           <source src="./demo/exp3/tgt.wav" type="audio/wav"/>
-                        </audio>
+                        "A recording of a S*"
                      </center>
                   </td>
+                  
                </tr>
                <tr>
                   <td>
                      <center>
-                        <img alt="fname" height="125" src="./demo/exp3/mix.png" width="280"/>
+                        <audio controls="">
+                           <source src="./demo/exp2/mix.wav" type="audio/wav"/>
+                        </audio>
                      </center>
                   </td>
                   <td>
                      <center>
-                        <img alt="fname" height="125" src="./demo/exp3/lass.png" width="280"/>
+                        <audio controls="">
+                           <source src="./demo/exp2/lass.wav" type="audio/wav"/>
+                        </audio>
                      </center>
                   </td>
                   <td>
                      <center>
-                        <img alt="fname" height="125" src="./demo/exp3/human.png" width="280"/>
+                        <audio controls="">
+                           <source src="./demo/exp2/human.wav" type="audio/wav"/>
+                        </audio>
                      </center>
                   </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp3/tgt.png" width="280"/>
-                     </center>
-                  </td>
+               
                </tr>
                <tr>
                   <td>
                      <center>
-                        (a) audio mixture
+                        
                      </center>
                   </td>
                   <td>
                      <center>
-                        (b) LASS (AudioCaps)
+                        "A recording of a S*"
                      </center>
                   </td>
                   <td>
                      <center>
-                        (c) LASS (human)
+                        "A recording of a S*"
+                     </center>
+                  </td>
+               
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/mix.wav" type="audio/wav"/>
+                        </audio>
                      </center>
                   </td>
                   <td>
                      <center>
-                        (d) target source
+                        <audio controls="">
+                           <source src="./demo/exp2/lass.wav" type="audio/wav"/>
+                        </audio>
                      </center>
                   </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/human.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                 
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a S*"
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        "A recording of a S*"
+                     </center>
+                  </td>
+               
                </tr>
                </tr>
             </table>
          </tr>
       </table>
       <br>
-
       <table align=center width=1200px>
-         <tr>
-            <td align=left width=1200px>
-               Language Query (AudioCaps): ''<i>Someone is typing on a keyboard</i>''<br><br>
-               Language Query (human): ''<i>The sound of hitting the keyboard</i>''
-            </td>
-         </tr>
-         <tr>
-            <table align=center width=1200px>
-               <tr>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp4/mix.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp4/lass.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp4/human.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp4/tgt.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp4/mix.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp4/lass.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp4/human.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp4/tgt.png" width="280"/>
-                     </center>
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                     <center>
-                        (a) audio mixture
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (b) LASS (AudioCaps)
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (c) LASS (human)
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (d) target source
-                     </center>
-                  </td>
-               </tr>
-               </tr>
-            </table>
-         </tr>
-      </table>
-      <br>
-
-      <table align=center width=1200px>
-         <tr>
-            <td align=left width=1200px>
-               Language Query (AudioCaps): ''<i>Distant claps of thunder with rain falling and a man speaking</i>''<br><br>
-               Language Query (human): ''<i>Very rainy and a man is talking dirty words in the background</i>''
-            </td>
-         </tr>
-         <tr>
-            <table align=center width=1200px>
-               <tr>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp5/mix.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp5/lass.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp5/human.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp5/tgt.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp5/mix.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp5/lass.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp5/human.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp5/tgt.png" width="280"/>
-                     </center>
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                     <center>
-                        (a) audio mixture
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (b) LASS (AudioCaps)
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (c) LASS (human)
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (d) target source
-                     </center>
-                  </td>
-               </tr>
-               </tr>
-            </table>
-         </tr>
-      </table>
-      <br>
-
-      <table align=center width=1200px>
-         <tr>
-            <td align=left width=1200px>
-               Language Query (AudioCaps): ''<i>Heavy wind and birds chirping</i>''<br><br>
-               Language Query (human): ''<i>A bird is chirping under the thunder storm</i>''
-            </td>
-         </tr>
-         <tr>
-            <table align=center width=1200px>
-               <tr>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp6/mix.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp6/lass.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp6/human.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp6/tgt.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp6/mix.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp6/lass.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp6/human.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp6/tgt.png" width="280"/>
-                     </center>
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                     <center>
-                        (a) audio mixture
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (b) LASS (AudioCaps)
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (c) LASS (human)
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (d) target source
-                     </center>
-                  </td>
-               </tr>
-               </tr>
-            </table>
-         </tr>
-      </table>
-      <br>
-
-      <table align=center width=1200px>
-         <tr>
-            <td align=left width=1200px>
-               Language Query (AudioCaps): ''<i>Applauding followed by people singing and a tambourine</i>''<br><br>
-               Language Query (human): ''<i>A show start with audience applauding and then singing</i>''
-            </td>
-         </tr>
-         <tr>
-            <table align=center width=1200px>
-               <tr>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp7/mix.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp7/lass.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp7/human.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp7/tgt.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp7/mix.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp7/lass.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp7/human.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp7/tgt.png" width="280"/>
-                     </center>
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                     <center>
-                        (a) audio mixture
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (b) LASS (AudioCaps)
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (c) LASS (human)
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (d) target source
-                     </center>
-                  </td>
-               </tr>
-               </tr>
-            </table>
-         </tr>
-      </table>
-      <br>
-
-      <table align=center width=1200px>
-         <tr>
-            <td align=left width=1200px>
-               Language Query (AudioCaps): ''<i>A woman is giving a speech</i>''<br><br>
-               Language Query (human): ''<i>A female is speaking with clearing throat sounds</i>''
-            </td>
-         </tr>
-         <tr>
-            <table align=center width=1200px>
-               <tr>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp8/mix.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp8/lass.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp8/human.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp8/tgt.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp8/mix.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp8/lass.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp8/human.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp8/tgt.png" width="280"/>
-                     </center>
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                     <center>
-                        (a) audio mixture
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (b) LASS (AudioCaps)
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (c) LASS (human)
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (d) target source
-                     </center>
-                  </td>
-               </tr>
-               </tr>
-            </table>
-         </tr>
-      </table>
-      <br> -->
-
-      <!-- <table align=center width=1200px>
-         <tr>
-            <td align=left width=1200px>
-               Language Query (AudioCaps): ''<i>Church bells ringing</i>''<br><br>
-               Language Query (human): ''<i>Someone is striking a large church bell</i>''
-            </td>
-         </tr>
-         <tr>
-            <table align=center width=1200px>
-               <tr>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp9/mix.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp9/lass.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp9/human.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp9/tgt.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp9/mix.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp9/lass.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp9/human.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp9/tgt.png" width="280"/>
-                     </center>
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                     <center>
-                        (a) audio mixture
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (b) LASS (AudioCaps)
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (c) LASS (human)
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (d) target source
-                     </center>
-                  </td>
-               </tr>
-               </tr>
-            </table>
-         </tr>
-      </table> -->
-      <br>
-
-      <!-- <table align=center width=1200px>
-         <tr>
-            <td align=left width=1200px>
-               Language Query (AudioCaps): ''<i>An adult male is laughing</i>''<br><br>
-               Language Query (human): ''<i>A man is laughing really hard</i>''
-            </td>
-         </tr>
-         <tr>
-            <table align=center width=1200px>
-               <tr>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp10/mix.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp10/lass.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp10/human.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <audio controls="">
-                           <source src="./demo/exp10/tgt.wav" type="audio/wav"/>
-                        </audio>
-                     </center>
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp10/mix.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp10/lass.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp10/human.png" width="280"/>
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        <img alt="fname" height="125" src="./demo/exp10/tgt.png" width="280"/>
-                     </center>
-                  </td>
-               </tr>
-               <tr>
-                  <td>
-                     <center>
-                        (a) audio mixture
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (b) LASS (AudioCaps)
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (c) LASS (human)
-                     </center>
-                  </td>
-                  <td>
-                     <center>
-                        (d) target source
-                     </center>
-                  </td>
-               </tr>
-               </tr>
-            </table>
-         </tr>
-      </table> -->
-      <br>
-
-
-      <!-- <br>
-      <hr>
-      <table align=center width=1000px>
          <center>
-            <h1>Paper</h1>
+            <h2>Can the methods learn musical properties?</h2>
          </center>
          <tr>
-            <td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-            <td>
-               <span style="font-size:14pt">X. Liu, H. Liu, Q. Kong, X. Mei, J. Zhao, Q. Huang, M.D. Plumbley, W. Wang<br>
-               <br>
-               <b>Separate What You Describe: Language-Queried Audio Source Separation</b><br>
-               <br>
-               Accepted at INTERSPEECH 2022<br>
-               <br>
-               <br>
-               <a href="./resources/bibtex.txt">[Bibtex]</a>&nbsp&nbsp&nbsp<a href="https://arxiv.org/abs/2203.15147">[ArXiv]</a>&nbsp&nbsp&nbsp<a href="https://github.com/liuxubo717/LASS">[Code]</a>
-               <!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
+            <td align=left width=1200px>
+               Here we demonstrate the ability of the methods to learn a concept's <b>tempo</b>, <b>harmonic properties</b> like scale and key, and <b>dynamics</b>.
+               While both methods (and especially Dreambooth) can, to some extent, maintain the original tempo and key, they fail to maintain dynamics.<br><br>
+
             </td>
          </tr>
+        
+            <table align=center width=1200px>
+               <tr>
+                  <td>
+                     <center>
+                        
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        (a) Reference Audio
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        (b) Dreambooth
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        (c) Textual Inversion
+                     </center>
+                  </td>
+               </tr>
+               <tr>
+               <tr>
+                  <td>
+                     <center>
+                        <b>Maintaining Reference Tempo: </b>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/mix.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/lass.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/human.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        180 BPM
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        180 BPM
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        180 BPM
+                     </center>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        <b>Maintaining Reference Scale and Key: </b>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/mix.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/lass.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/human.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        A minor
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        B Major
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        A Minor
+                     </center>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        <b>Maintaining Reference Dynamics: </b>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/mix.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/lass.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        <audio controls="">
+                           <source src="./demo/exp2/human.wav" type="audio/wav"/>
+                        </audio>
+                     </center>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <center>
+                        
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        -13 LUFS
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        -13 LUFS
+                     </center>
+                  </td>
+                  <td>
+                     <center>
+                        -13 LUFS
+                     </center>
+                  </td>
+               </tr>
+               
+              
+            </table>
+         </tr>
       </table>
-      <br> -->
       <br>
       <hr>
       <br>
-      <!-- <table align=center width=900px>
+      <center>
+         <h1>More Examples and Applications</h1>
+      </center>
+      
+      <table align=center width=1200px>
+         
          <tr>
-            <td width=400px>
-               <left>
-                  <center>
-                     <h1>Acknowledgements</h1>
-                  </center>
-                  <p>
-                     This research was supported by a Newton Institutional Links Award from the British Council (Grant number 623805725), a Research Scholarship from the China Scholarship Council (CSC), and a PhD Studentship from the University of Surrey.
-                  </p>
-               </left>
+            <td align=left width=1200px>
+               Here we present different applications of audio personalization.<br><br>
+
             </td>
          </tr>
-      </table> -->
-      <br>
-   </body>
+         <center>
+            <h2>Multi-Concept Generation</h2>
+         </center>   
+
+         <table align=center width=1200px>
+            <tr>
+               <td>
+                  <center>
+                     (a) Reference A
+                  </center>
+               </td>
+               <td>
+                  <center>
+                     (b) Reference B
+                  </center>
+               </td>
+               <td>
+                  <center>
+                     (c) Generation
+                  </center>
+               </td>
+               
+            </tr>
+            <tr>
+            <tr>
+               <td>
+                  <center>
+                     <audio controls="">
+                        <source src="./demo/exp2/mix.wav" type="audio/wav"/>
+                     </audio>
+                  </center>
+               </td>
+               <td>
+                  <center>
+                     <audio controls="">
+                        <source src="./demo/exp2/lass.wav" type="audio/wav"/>
+                     </audio>
+                  </center>
+               </td>
+               <td>
+                  <center>
+                     <audio controls="">
+                        <source src="./demo/exp2/human.wav" type="audio/wav"/>
+                     </audio>
+                  </center>
+               </td>
+               
+
+
+
+
+
+      </table>
+
+      <table align=center width=1200px>
+         
+         
+         <center>
+            <h2>Long-Form Generation</h2>
+         </center>   
+         <tr>
+            <td align=left width=1200px>
+               Our model can generate arbitrarily long musical audio,...<br><br>
+
+            </td>
+         </tr>
+
+         <table align=center width=1200px>
+            <tr>
+               <td>
+                  <center>
+                     (a) Reference A
+                  </center>
+               </td>
+               <td>
+                  <center>
+                     (b) Reference B
+                  </center>
+               </td>
+               <td>
+                  <center>
+                     (c) Generation
+                  </center>
+               </td>
+               
+            </tr>
+            <tr>
+            <tr>
+               <td>
+                  <center>
+                     <audio controls="">
+                        <source src="./demo/exp2/mix.wav" type="audio/wav"/>
+                     </audio>
+                  </center>
+               </td>
+               <td>
+                  <center>
+                     <audio controls="">
+                        <source src="./demo/exp2/lass.wav" type="audio/wav"/>
+                     </audio>
+                  </center>
+               </td>
+               <td>
+                  <center>
+                     <audio controls="">
+                        <source src="./demo/exp2/human.wav" type="audio/wav"/>
+                     </audio>
+                  </center>
+               </td>
+               
+
+
+
+
+
+      </table>
+
+
+
+   <br>
+   <hr
+
+     
 </html>
 </table>
