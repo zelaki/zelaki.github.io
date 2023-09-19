@@ -135,10 +135,10 @@
 <html>
    <head>
       <title>Investigating Personalization Methods In Text To Music Generation</title>
-      <meta property="og:image" content="Path to my teaser.png"/>
+      <meta property="og:image" content="img/intro_smaller.png"/>
       <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
-      <meta property="og:title" content="Creative and Descriptive Paper Title." />
-      <meta property="og:description" content="Paper description." />
+      <meta property="og:title" content="Investigating Personalization Methods In Text To Music Generation" />
+      <meta property="og:description" content="In this work, we investigate the personalization of text-to-music diffusion models in a few-shot setting." />
       <!-- Get from Google Analytics -->
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src=""></script>
@@ -1220,7 +1220,8 @@
          <tr>
             <td align=left width=1200px>
                Here we demonstrate the ability of the methods to learn a concept's <b>tempo</b>, <b>harmonic properties</b> like scale and key, and <b>dynamics</b>.
-               While both methods (and especially Dreambooth) can, to some extent, maintain the original tempo and key, they fail to maintain dynamics.<br><br>
+               While both methods (and especially Dreambooth) can, to some extent, maintain the original tempo and key, they fail to maintain extreme dynamics, as the model has a normalizing effect on audio.<br><br>
+               All features were extracted automatically using Essentia.<br><br>
 
             </td>
          </tr>
@@ -1258,21 +1259,21 @@
                   <td>
                      <center>
                         <audio controls="">
-                           <source src="./demo/exp2/mix.wav" type="audio/wav"/>
+                           <source src="zelaki.github.io/demo_audio/music/bpm/toere_1.wav" type="audio/wav"/>
                         </audio>
                      </center>
                   </td>
                   <td>
                      <center>
                         <audio controls="">
-                           <source src="./demo/exp2/lass.wav" type="audio/wav"/>
+                           <source src="zelaki.github.io/demo_audio/music/bpm/a_recording_of_a_<toere_percussion>_1.wav" type="audio/wav"/>
                         </audio>
                      </center>
                   </td>
                   <td>
                      <center>
                         <audio controls="">
-                           <source src="./demo/exp2/human.wav" type="audio/wav"/>
+                           <source src="zelaki.github.io/demo_audio/music/bpm/a_recording_of_a_<toere>_0.wav" type="audio/wav"/>
                         </audio>
                      </center>
                   </td>
@@ -1285,17 +1286,17 @@
                   </td>
                   <td>
                      <center>
-                        180 BPM
+                        118 BPM 
                      </center>
                   </td>
                   <td>
                      <center>
-                        180 BPM
+                        122 BPM
                      </center>
                   </td>
                   <td>
                      <center>
-                        180 BPM
+                        160 BPM
                      </center>
                   </td>
                </tr>
@@ -1308,21 +1309,21 @@
                   <td>
                      <center>
                         <audio controls="">
-                           <source src="./demo/exp2/mix.wav" type="audio/wav"/>
+                           <source src="zelaki.github.io/demo_audio/music/morricone_0.wav" type="audio/wav"/>
                         </audio>
                      </center>
                   </td>
                   <td>
                      <center>
                         <audio controls="">
-                           <source src="./demo/exp2/lass.wav" type="audio/wav"/>
+                           <source src="zelaki.github.io/demo_audio/music/a_recording_of_a_<morricone_classical_music>_1.wav" type="audio/wav"/>
                         </audio>
                      </center>
                   </td>
                   <td>
                      <center>
                         <audio controls="">
-                           <source src="./demo/exp2/human.wav" type="audio/wav"/>
+                           <source src="zelaki.github.io/demo_audio/music/a_recording_of_a_<morricone>_2.wav" type="audio/wav"/>
                         </audio>
                      </center>
                   </td>
