@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<head>
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
@@ -24,7 +27,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Enabling Local Editing in Diffusion Models by Joint and Individual Component Analysis</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,27 +55,44 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h2 class="title is-1 publication-title">Enabling Local Editing in Diffusion Models by Joint and Individual Component Analysis</h2>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                Theodoros Kouzelis <sup>1,2</sup>, 
+                <!-- <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a>,</span> -->
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <!-- <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a>,</span> -->
+                Manos Plitsis <sup>3,4</sup>,
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://mihalisan.github.io/" target="_blank">Mihail A. Nikolaou,</a><sup>5</sup>
                   </span>
-                  </div>
+                  <span class="author-block">
+                    <a href="http://users.uoa.gr/~yannisp/" target="_blank">Yannis Panagakis</a><sup>1,4</sup>
+                  </span>
+
+                </div>
+
+                <br>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    1. <span class="author-block"><a href="https://archimedesai.gr/en/">Archimedes Unit</a></span>
+                    <br>
+                    <span class="author-block">2. National Technical University of Athens</span>
+                    <br>
+                    <span class="author-block">3. Institute for Language and Speech Processing, Athena RC</span>
+                    <br>
+                    <span class="author-block">4. Department of Informatics and Telecommunications, University of Athens </span>
+                    <br>
+                    <span class="author-block">5. The Cyprus Institute</span>
+                    <br>
+
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
-                      <span class="link-block">
+                      <!-- <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
@@ -80,17 +100,17 @@
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span>
+                    </span> -->
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
                       </span>
                       <span>Supplementary</span>
-                    </a>
+                    </a> -->
                   </span>
 
                   <!-- Github link -->
@@ -127,18 +147,13 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
+      <img src="static/images/intro_new.png" alt="Intro Image" id="tree" style="height: 100%; width: 100%; object-fit: cover;">
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      Given one or multiple regions of interest we can identify latent directions that result in diverse semantic edits without affecting the rest of the image. Linear interpolation within the identified semantic directions leads to gradual changes in the generated image like opening and closing the eyes.
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -148,8 +163,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+            Recent advances in Diffusion Models (DMs) have led to significant progress in visual synthesis and editing tasks, establishing them as a strong competitor to Generative Adversarial Networks (GANs). However, the latent space of DMs is not as well understood as that of GANs. Recent research has focused on unsupervised semantic discovery in the latent space of DMs by leveraging the bottleneck layer of the denoising network, which has been shown to exhibit properties of a semantic latent space. However, these approaches are limited to discovering global attributes. In this paper we address, the challenge of local image manipulation in DMs and introduce an unsupervised method to factorize the latent semantics learned by the denoising network of pre-trained DMs. Given an arbitrary image and defined regions of interest, we utilize the Jacobian of the denoising network to establish a relation between the regions of interest and their corresponding subspaces in the latent space. Furthermore, we disentangle the <em>joint</em> and <em>individual</em> components of these subspaces to identify latent directions that enable <em> local </em> image manipulation. Once discovered, these directions can be applied to different images to produce semantically consistent edits,  making our method suitable for practical applications. Experimental results on various datasets demonstrate that our method can produce semantic edits that are more localized and have better fidelity compared to the state-of-the-art. Our code will be made available upon acceptance.
         </div>
       </div>
     </div>
@@ -157,40 +171,68 @@
 </section>
 <!-- End paper abstract -->
 
+<br>
+<br>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop" style="padding-left: 0; padding-right: 0;">
+    <div class="hero-body" style="padding-left: 0; padding-right: 0;">
+      
+      <center><h2 class="title is-3">Method</h2></center>
+      <br>
+
+      <br>
+      <img src="static/images/method_new_color.drawio.png" alt="Intro Image" id="tree" style="transform: scale(1.2); object-fit: cover; width: 100%;">
+
+      <h2 class="subtitle has-text-centered" style="margin-left: 0; margin-right: 0; text-align: justify;">
+      <br>
+      <p>Firstly, we utilize the row space of the Jacobian \( J_\mathcal{H} \) constrained to each specified region, which is obtained by its Singular Value Decomposition (SVD). The row space is spanned by directions that manipulate the attributes in each region of interest. However, this approach lacks an explicit constraint ensuring localized edits, and hence other regions are inadvertently affected. To alleviate this and achieve local manipulation, we further propose decomposing the Jacobian associated with each region of interest into two distinct components: a joint and an individual component. The row space of the joint component comprises latent directions that induce global changes across the entire image. In contrast, the row space of the individual component, which is orthogonal to the joint, is spanned by latent directions that specifically target a designated region of interest without influencing other regions. To obtain this decomposition, we utilize the so-called Joint and Individual Variation Explained (JIVE).</p>
+      </h2>
+    </div>
+  </div>
+</section>
+
 
 <!-- Image carousel -->
+<center><h2 class="title is-3">Localized Attribute Edits</h2></center>
+
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
+
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="/home/theokouz/phd/bmvc_24/zelaki.github.io/localdiff/static/images/example_page/0.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="/home/theokouz/phd/bmvc_24/zelaki.github.io/localdiff/static/images/example_page/1.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <img src="/home/theokouz/phd/bmvc_24/zelaki.github.io/localdiff/static/images/example_page/2.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <img src="/home/theokouz/phd/bmvc_24/zelaki.github.io/localdiff/static/images/example_page/3.png" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
       </h2>
     </div>
+    <div class="item">
+      <!-- Your image here -->
+      <img src="/home/theokouz/phd/bmvc_24/zelaki.github.io/localdiff/static/images/example_page/4.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+      </h2>
+    </div>
+
+
   </div>
 </div>
 </div>
@@ -199,7 +241,7 @@
 
 
 
-
+<!-- <!-- 
 <!-- Youtube video -->
 <section class="hero is-small is-light">
   <div class="hero-body">
@@ -280,8 +322,8 @@
       <h2 class="title">BibTeX</h2>
       <pre><code>BibTex Code Here</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+</section> -->
+End BibTex citation -->
 
 
   <footer class="footer">
