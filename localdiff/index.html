@@ -181,14 +181,26 @@
       <br>
       <img src="static/images/method_new_color.drawio.png" alt="Intro Image" id="tree" style="transform: scale(1.2); object-fit: cover; width: 100%;">
 
-      <h2 class="subtitle has-text-centered" style="margin-left: 0; margin-right: 0; text-align: justify;">
+      <h2 class="subtitle" style="margin-left: 0; margin-right: 0; text-align: justify;">
       <br>
-      <p>Firstly, we utilize the row space of the Jacobian \( J_\mathcal{H} \) constrained to each specified region, which is obtained by its Singular Value Decomposition (SVD). The row space is spanned by directions that manipulate the attributes in each region of interest. However, this approach lacks an explicit constraint ensuring localized edits, and hence other regions are inadvertently affected. To alleviate this and achieve local manipulation, we further propose decomposing the Jacobian associated with each region of interest into two distinct components: a joint and an individual component. The row space of the joint component comprises latent directions that induce global changes across the entire image. In contrast, the row space of the individual component, which is orthogonal to the joint, is spanned by latent directions that specifically target a designated region of interest without influencing other regions. To obtain this decomposition, we utilize the so-called Joint and Individual Variation Explained (JIVE).</p>
+      <ul>
+        <li> &bull; Firstly, we utilize the row space of the Jacobian \( J_\mathcal{H} \) constrained to each specified region, which is obtained by its Singular Value Decomposition (SVD).</li>
+        <br>
+
+        <li>  &bull; The row space  \( \text{row}(J_\mathcal{H}) \) is spanned by directions that manipulate the attributes in each region of interest.</li>
+        <br>
+        <li> &bull; To achieve local manipulation, we propose decomposing the Jacobian associated with each region of interest into two distinct components: a joint and an individual component.</li>
+        <br>
+        <li>&bull; The row space of the joint component comprises latent directions that induce global changes across the entire image.</li>
+        <br>
+        <li> &bull; In contrast, the row space of the individual component, <i>which is orthogonal to the joint </i>, is spanned by latent directions that specifically target a designated region of interest without influencing other regions.</li>
+        <br>
+        <li>&bull; To obtain this decomposition, we utilize the so-called Joint and Individual Variation Explained (JIVE) method.</li>
+      </ul>
       </h2>
     </div>
   </div>
 </section>
-
 
 <!-- Image carousel -->
 
@@ -407,15 +419,153 @@
         <div class="item item-video2">
           <center><img src="static/images/gifs/74_0.gif" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
         </div>
+
         <div class="item item-video2">
-          <center><img src="static/images/gifs/96_0.gif" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+          <center><img src="static/images/gifs/58_2.gif" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
         </div>
+
+        <div class="item item-video2">
+          <center><img src="static/images/gifs/33_1.gif" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+
+
 
       </div>
     </div>
   </div>
 </section>
+
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <center><h4 class="title is-4">Smile</h4></center>
+      <div id="results-carousel" class="carousel results-carousel">
+
+
+        <div class="item item-video1">
+          <center><img src="static/images/gifs/90_1.gif" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+        <div class="item item-video2">
+          <center><img src="static/images/gifs/81_2.gif" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+        <div class="item item-video2">
+          <center><img src="static/images/gifs/68_0.gif" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+
+        <div class="item item-video2">
+          <center><img src="static/images/gifs/37_2.gif" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+        <div class="item item-video2">
+          <center><img src="static/images/gifs/18_2.gif" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <center><h4 class="title is-4">Eye Color</h4></center>
+      <div id="results-carousel" class="carousel results-carousel">
+
+
+        <div class="item item-video1">
+          <center><img src="static/images/gifs/eye_17_0" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+        <div class="item item-video2">
+          <center><img src="static/images/gifs/eye_38_2.gif" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-small ">
+  <div class="hero-body">
+    <div class="container">
+      <center><h4 class="title is-4">Gaze</h4></center>
+      <div id="results-carousel" class="carousel results-carousel">
+
+
+        <div class="item item-video1">
+          <center><img src="static/images/gifs/eye_19_1" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+
+
+
+        <div class="item item-video1">
+          <center><img src="static/images/gifs/eye_22_1" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+
+        <div class="item item-video1">
+          <center><img src="static/images/gifs/eye_30_0" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+
+        <div class="item item-video1">
+          <center><img src="static/images/gifs/eye_32_2" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+
+        <div class="item item-video1">
+          <center><img src="static/images/gifs/eye_37_0" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
 <!-- End video carousel -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <center><h4 class="title is-4">Open-Close Mouth</h4></center>
+      <div id="results-carousel" class="carousel results-carousel">
+
+
+        <div class="item item-video1">
+          <center><img src="static/images/gifs/99_1.gif" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+
+        <div class="item item-video1">
+          <center><img src="static/images/gifs/82_1.gif" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+
+        <div class="item item-video1">
+          <center><img src="static/images/gifs/80_1.gif" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+
+        <div class="item item-video1">
+          <center><img src="static/images/gifs/69_1.gif" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+
+        <div class="item item-video1">
+          <center><img src="static/images/gifs/55_2.gif" alt="Animated GIF" id="gif1" style="height: 30%; width: 30%; object-fit: cover;"></center>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 
